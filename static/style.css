@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'FreeSansBold';
+    src: url('FreeSansBold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }
+
+body {
+    background-color: #e9e8e4;
+}  
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 98vh;
+    padding: 0 10vh ;
+    column-gap: 10vh;
+    
+}
+.midnights {
+    font-family: 'FreeSansBold';
+    font-size: 6vw;
+    
+    
+}
+.gradient {
+    background: linear-gradient(to right, rgba(66,81,129,1) 0%, rgba(105,148,174,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.me:hover{
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 1s infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .flex {
+        flex-direction: column;
+        padding: 0 2vh;
+    }
+    .midnights {
+        font-size: 9vw;
+        background: linear-gradient(to right, rgba(66,81,129,1) 0%, rgba(105,148,174,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .gradient {
+        color: black;
+    }
+}
